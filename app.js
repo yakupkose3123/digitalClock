@@ -42,7 +42,9 @@ function calculate(){
     date.getHours()>12 ? amPm.innerText = "PM" : amPm.innerText = "AM";
 }
 
-setInterval(calculate,1000)
+addEventListener("load", ()=>{
+    setInterval(calculate,1000)
+})
 
 
 
