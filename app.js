@@ -32,20 +32,28 @@ function findDay(i){
 
 function calculate(){
     let date = new Date();
-    hour.innerText = String(date.getHours()).padStart(2,0)+":";
+    
     minute.innerText = String(date.getMinutes()).padStart(2,0)+":";
     seconds.innerText = String(date.getSeconds()).padStart(2,0);
     year.innerText = date.getFullYear();
     month.innerText = String(date.getMonth()+1).padStart(2,0);
     dayDigit.innerText = String(date.getDate()).padStart(2,0);
     day.innerText = findDay(date.getDay());
-    date.getHours()>12 ? amPm.innerText = "PM" : amPm.innerText = "AM";
+    if(date.getHours()>12){
+        amPm.innerText = "PM";
+        hour.innerText = String((date.getHours())%12).padStart(2,0)+":";
+
+    }else{
+        amPm.innerText = "AM";
+        hour.innerText = String(date.getHours()).padStart(2,0)+":";
+
+    }
 }
 
 
 
 addEventListener("load", ()=>{
-    setInterval(calculate,1000)
+    setInterval(calculate,1000);
 })
 
 
