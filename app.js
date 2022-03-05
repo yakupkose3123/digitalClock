@@ -52,6 +52,7 @@ function calculate(){
 
 addEventListener("load", ()=>{
     setInterval(calculate,1000);
+})
 
 
 
