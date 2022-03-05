@@ -46,11 +46,8 @@ function calculate(){
     }else{
         amPm.innerText = "AM";
         hour.innerText = String(date.getHours()).padStart(2,0)+":";
-
     }
 }
-
-
 
 addEventListener("load", ()=>{
     setInterval(calculate,1000);

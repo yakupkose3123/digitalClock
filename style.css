@@ -17,7 +17,7 @@ text-align: center;
 color: white;
 border-radius: 20px;
 
-font-family: "digital-7";
+font-family: "digital-7" , 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
@@ -39,7 +39,7 @@ font-family: "digital-7";
 }
 
 .hour,.minute,.seconds{
-    font-size: 50px;
+    font-size: 40px;
     width: 30%;
     /* border: 1px solid wheat; */
 }
