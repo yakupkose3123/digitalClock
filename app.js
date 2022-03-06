@@ -19,6 +19,10 @@ getDay() => Get the weekday as a number (0-6)
 You can add additional functionalities to your clock. */
 
 
+window.addEventListener("load", ()=>{
+    setInterval(calculate,1000);
+    findDay();
+})
 
 function findDay(i){
     if(i==1) return "Monday" ;
@@ -27,7 +31,7 @@ function findDay(i){
     if(i==4) return "Thursday" ;
     if(i==5) return "Friday" ;
     if(i==6) return "Saturday" ;
-    if(i==7) return "Sunday" ;
+    if(i==0) return "Sunday" ;
 }
 
 function calculate(){
@@ -48,15 +52,6 @@ function calculate(){
         hour.innerText = String(date.getHours()).padStart(2,0)+":";
     }
 }
-
-
-addEventListener("load", ()=>{
-    setInterval(calculate,1000);
-})
-
-
-
-
 
 
 
